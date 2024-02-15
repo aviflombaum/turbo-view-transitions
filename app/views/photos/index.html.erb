@@ -4,7 +4,12 @@
       <% photo_group.each do |photo| %>
         <div>
           <%= link_to photo_path(photo) do %>
-            <img class="h-auto max-w-full rounded-lg" src="<%= photo.url %>" alt="<%= photo.name %>" style="view-transition-name: photo_<%= photo.id %>">
+            <img
+              class="h-auto max-w-full rounded-lg"
+              src="<%= photo.url %>"
+              alt="<%= photo.name %>"
+              style="view-transition-name: photo_<%= photo.id %>"
+            >
           <% end %>
         </div>
       <% end %>
