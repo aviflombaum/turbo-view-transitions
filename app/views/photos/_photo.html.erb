@@ -8,15 +8,13 @@
         </svg>
       <% end %>
     </div>
-    <%= turbo_frame_tag dom_id(photo, :likes) do %>
-      <div class="photo-viewer__like-button" style="view-transition-name: zoom">
-        <%= form_for(photo) do |f| %>
-          <%= f.button type: 'submit', class: "like-button__link" do %>
-            <span class="like-button__icon">❤️</span>
-            <span class="like-button__count"><%= photo.likes_count %></span>
-          <% end %>
+    <div class="photo-viewer__like-button" style="view-transition-name: zoom">
+      <%= form_for(photo) do |f| %>
+        <%= f.button type: 'submit', class: "like-button__link" do %>
+          <span class="like-button__icon">❤️</span>
+          <span class="like-button__count"><%= photo.likes_count %></span>
         <% end %>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 <% end %>
