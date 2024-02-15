@@ -9,7 +9,8 @@ class PhotosController < ApplicationController
   end
 
   def update
-    @photo.increment!(:likes_count)
+    @photo.increment(:likes_count)
+    @photo.save
     redirect_to photo_path(@photo)
   end
 
