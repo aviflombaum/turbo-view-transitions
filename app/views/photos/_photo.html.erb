@@ -1,10 +1,20 @@
-<%= content_tag :div, class: "photo-viewer", style: "view-transition-name: #{dom_id(photo)}", id: dom_id(photo) do %>
+<%= content_tag :div, 
+  class: "photo-viewer", 
+  style: "view-transition-name: #{dom_id(photo)}", 
+  id: dom_id(photo) do %>
   <div class="photo-viewer__container">
     <img class="photo-viewer__image" src="<%= photo.url %>" alt="<%= photo.name %>">
     <div class="photo-viewer__back-link">
       <%= link_to photos_path, class: "back-link__link" do %>
-        <svg xmlns="http://www.w3.org/2000/svg" class="back-link__icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="back-link__icon"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/>
         </svg>
       <% end %>
     </div>
