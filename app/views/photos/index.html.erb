@@ -1,0 +1,13 @@
+<div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+  <% @photos.each_slice(3) do |photo_group| %>
+    <div class="grid gap-4">
+      <% photo_group.each do |photo| %>
+        <div>
+          <%= link_to photo_path(photo) do %>
+            <img class="h-auto max-w-full rounded-lg" src="<%= photo.url %>" alt="<%= photo.name %>" style="view-transition-name: photo_<%= photo.id %>">
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

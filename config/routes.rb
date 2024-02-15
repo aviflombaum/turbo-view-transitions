@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :photos
   resources :invoices
   get "/posts/tags/new" => "posts/tags#new", :as => :posts_tags
 
